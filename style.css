@@ -6,7 +6,7 @@ body {
 	.Bwrappers {
 		max-width: 1000px;
 		margin: 0 auto;
-		position: relative;
+		position: relative; 
 	}
 
 		.Bwrappers:after {
@@ -35,15 +35,11 @@ body {
 				padding: 20px 10px;
 			}
 			.nav li a:hover {
-				padding-top: 5px;
-				padding-bottom: 5px;
-				border-top: 3px solid #2aacc8;
+				border-top: 1px solid #2aacc8;
 				color: #2aacc8;
 				background-color: white;
 			}
-			.nav li a:hover:after {
-				color: black;
-			}
+
 
 		ul.subnav {
 			display: none;
@@ -103,15 +99,14 @@ body {
 					    
 					}
 					ul.subnav > li > a:hover {
-					    border-top: none;
+
 					    color:  #2aacc8;
-					    padding: 10px;
 					}
 
 						ul.nav > li:hover > ul.subnav {
 						    display: block;
 						  	z-index: 1;
-						  	border-bottom: 3px solid #2aacc8;
+						  	border-bottom: 1px solid #2aacc8;
 						}
 		.downarrow:after {
 			content: "\25be";
@@ -147,6 +142,7 @@ span {
 				background-color: #dd5835;
 				display: block;
 				margin: 0 auto;
+				padding-left: 60px;
 				max-width: 1000px;
 			}
 			.foil ul {
@@ -177,7 +173,7 @@ span {
 			.next > div  {
 				display: inline-block;
 				width: 23%;
-				margin: 5px;
+				margin: 8px;
 				vertical-align: top;
 			}
 
@@ -233,6 +229,7 @@ span {
 
 		.next a {
 			color: #2aacc8;
+			text-decoration: none;
 		}
 
 		.next a:before {
@@ -258,6 +255,8 @@ span {
 
 		.latest ul {
 			float: right;
+			-webkit-margin-after:0px;
+			    -webkit-margin-before: 0.5em;
 		}
 
 			.latest li {
@@ -266,9 +265,9 @@ span {
 			width: 15px;
 			background-color: #2aacc8;
 			border-radius: 50%;
-			font-weight: 700;
-			margin: 5px; 
 			text-align: center;
+			font-size: 12px;
+			padding-top: 2px;
 			}
 			.latest h6:before {
 				content: "";
@@ -283,10 +282,17 @@ span {
 			.latest h6 {
 				width: 200px;
 				display: inline;
+				font-size: 15px;
 			}
 
 		.pic {
 			text-align: center;
+		}
+		.latest.pic {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
 		}
 
 		.gallery {
@@ -308,13 +314,11 @@ span {
 	}
 
 	.gallery:hover .other {
-		display: block;
+		display: flex;
 		height: 50%;
+		flex-direction: row;
+		justify-content: center;
 	}
-	.other a {
-		vertical-align: middle;
-	}
-	
 		.other a:before {
 			content: "";
 			display: inline-block;
@@ -322,6 +326,7 @@ span {
 			height: 40px;
 			background-repeat: no-repeat;	
 			background-position: bottom;
+			margin: 15px;
 		}
 		
 			.other a:first-child:before {
@@ -338,6 +343,8 @@ hr {
 	color: lightgray;
 	max-width: 1000px;
 	margin-bottom: 10px;
+	display: block;
+	margin: 0 auto; 
 	}
 	
 	.person {
@@ -403,14 +410,14 @@ hr {
 			height: 68px;
 			color: #363636;
 			font-size: 16px;
-			font-weight: 400;
 			line-height: 26px;
 			display: inline-block;
-			padding: 30px;
-
+			padding: 24px;
+			-webkit-margin-before: 0.5em;
+			-webkit-margin-start: 0.5em;
 		}
 
-		.download b {
+		.download div {
 			display: inline-block;
 			color: #0d0707;
 			font-weight: 700;
@@ -426,9 +433,10 @@ hr {
 			border: 1px solid #2aacc8;
 			border-radius: 8px;
 			box-shadow: inset 0 2px 1px rgba(255, 255, 255, 0.1), 0 2px 3px rgba(0, 0, 0, 0.2);
+			margin: 0 0 50px 40px; 
 		}
 
-		.download b:before {
+		.download div:before {
 				content: "";
 				display: inline-block;
 				width: 50px;
@@ -446,7 +454,7 @@ hr {
 		}
 
 footer {
-	text-align: justify;
+	text-align: left;
 }
 
 	footer > div {
@@ -489,6 +497,10 @@ footer {
 
 	footer > div .end {
 		margin-top: 25px;
+	}
+	footer ul {
+		list-style-type: none;
+		-webkit-padding-start: 0px; 
 	}
 
 	footer > div > ul > li > a {
